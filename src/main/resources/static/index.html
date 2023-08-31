@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Application</title>
+    <style>
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<h1>Loan Application</h1>
+<form id="applicationForm">
+    <label for="phoneNumber">Phone Number:  +</label>
+    <input type="number" id="phoneNumber" name="phoneNumber" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="monthlyIncome">Monthly Income:</label>
+    <input type="number" id="monthlyIncome" name="monthlyIncome" value="0" required><br><br>
+
+    <label for="monthlyExpenses">Monthly Expenses:</label>
+    <input type="number" id="monthlyExpenses" name="monthlyExpenses" value="0" required><br><br>
+
+    <label for="monthlyCreditLiabilities">Monthly Credit Liabilities:</label>
+    <input type="number" id="monthlyCreditLiabilities" name="monthlyCreditLiabilities" value="0" required><br><br>
+
+    <label for="dependents">Dependents:</label>
+    <input type="number" id="dependents" name="dependents" value="0" required><br><br>
+
+    <label for="maritalStatus">Marital Status:</label>
+    <select id="maritalStatus" name="maritalStatus">
+        <option value="SINGLE">Single</option>
+        <option value="MARRIED">Married</option>
+        <option value="DIVORCED">Divorced</option>
+        <option value="COHABITING">Cohabiting</option>
+    </select><br><br>
+
+    <label for="agreeToBeScored">Agree to Be Scored:</label>
+    <input type="checkbox" id="agreeToBeScored" name="agreeToBeScored" value="false"><br><br>
+
+    <label for="agreeToDataSharing">Agree to Data Sharing:</label>
+    <input type="checkbox" id="agreeToDataSharing" name="agreeToDataSharing" value="false"><br><br>
+
+    <label for="amount">Loan Amount:</label>
+    <input type="number" id="amount" name="amount" value="0" required><br><br>
+
+    <button type="submit">Submit Application</button>
+</form>
+<p id="errorMessage" class="error-message"></p>
+
+<div id="statusSection" style="display: none;">
+    <h2>Application Status</h2>
+    <p id="statusText">We are processing your request, please wait</p>
+</div>
+
+<div id="offersSection" style="display: none;">
+    <h2>Offers</h2>
+    <ul id="offerList"></ul>
+</div>
+
+<div id="noOffersSection" style="display: none;">
+    <p>Sorry, we can't offer you anything this time.</p>
+</div>
+
+<div id="confirmationSection" style="display: none;">
+    <h2>Confirmation</h2>
+    <p id="confirmationText"></p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
