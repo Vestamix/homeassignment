@@ -45,6 +45,7 @@ Next request checks status of application using that provided id.
 
 The status depends on external services response:
 - Both are draft - returns DRAFT
+- Both failed - returns PROCESSED
 - One is draft, another is processed - returns DRAFT
 - One is not responding, another is processed - returns PROCESSED
 - Both are processed - returns PROCESSED
@@ -56,9 +57,12 @@ When status is PROCESSED, means that UI can check what is offered for client as 
 ![Offers](https://i.postimg.cc/ncm2B4mV/Screenshot-2023-09-01-at-09-41-09.png)
 
 Clicking on button:
+
 ![Confirmation](https://i.postimg.cc/JnqNPxqZ/Screenshot-2023-09-01-at-09-53-54.png)
 
+
 If there are no offers:
+
 ![NoOffers](https://i.postimg.cc/2SnN3LGg/Screenshot-2023-09-01-at-09-59-00.png)
 
 ## Workflow diagram
